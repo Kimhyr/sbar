@@ -1,5 +1,5 @@
-#ifndef SBAR_TEMP_H
-#define SBAR_TEMP_H
+#ifndef SBAR_TEMP_HXX
+#define SBAR_TEMP_HXX
 
 #include <ios>
 #include <fstream>

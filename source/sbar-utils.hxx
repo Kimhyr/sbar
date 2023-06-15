@@ -1,5 +1,5 @@
-#ifndef SBAR_UTILS_H
-#define SBAR_UTILS_H
+#ifndef SBAR_UTILS_HXX
+#define SBAR_UTILS_HXX
 
 #include <ios>
 #include <limits>

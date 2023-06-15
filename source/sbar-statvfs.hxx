@@ -1,9 +1,8 @@
-#ifndef SBAR_STATVFS_H
-#define SBAR_STATVFS_H
+#ifndef SBAR_STATVFS_HXX
+#define SBAR_STATVFS_HXX
 
 #include <ios>
 #include <sys/statvfs.h>
-
 
 namespace sbar
 {

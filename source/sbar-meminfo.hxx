@@ -1,5 +1,5 @@
-#ifndef SBAR_SYSINFO_H
-#define SBAR_SYSINFO_H
+#ifndef SBAR_SYSINFO_HXX
+#define SBAR_SYSINFO_HXX
 
 #include <fstream>
 

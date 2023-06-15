@@ -1,5 +1,5 @@
-#include "sbar-meminfo.h"
-#include "sbar-utils.h"
+#include "sbar-meminfo.hxx"
+#include "sbar-utils.hxx"
 
 #include <iostream>
 

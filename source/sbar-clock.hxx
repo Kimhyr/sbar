@@ -1,5 +1,5 @@
-#ifndef SBAR_CLOCK_H
-#define SBAR_CLOCK_H
+#ifndef SBAR_CLOCK_HXX
+#define SBAR_CLOCK_HXX
 
 #include <chrono>
 #include <ostream>

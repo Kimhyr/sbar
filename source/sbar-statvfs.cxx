@@ -1,5 +1,5 @@
-#include "sbar-statvfs.h"
-#include "sbar-utils.h"
+#include "sbar-statvfs.hxx"
+#include "sbar-utils.hxx"
 
 #include <ostream>
 

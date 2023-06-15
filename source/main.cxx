@@ -1,4 +1,4 @@
-#include "sbar.h"
+#include "sbar.hxx"
 
 #include <immintrin.h>
 #include <iostream>

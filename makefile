@@ -1,11 +1,19 @@
-TARGET			:= sbar
-MODE			:= 
-SUFFIX			:= c
+# compiler cache support
+#
+ifeq ($(shell which sccache),)
+	CACHE ?= sccache
+else ifeq ($(shell which ccache),)
+	CACHE ?= ccache 
+endif
 
-# compilation
+TARGET		:= sbar
+BUILD_MODE	:= 
+SUFFIX		:= cxx
+
+# compilation command
 #
 COMPILER		:= clang++
-COMPILER_FLAGS	:= -fdiagnostics-color=always -mavx2 -mavx -std=c++20 -O3 -Wall -Wextra -pedantic
+COMPILER_FLAGS	:= -Isource -fdiagnostics-color=always -std=c++20 -O3 -Wall -Wextra -pedantic
 
 ifeq '$(MODE)' 'debug'
 	COMPILER_FLAGS += -g
@@ -13,19 +21,15 @@ endif
 
 # paths
 #
-SOURCE_PATH		:= source
-OBJECT_PATH		:= object
-BINARY_PATH		:= binary
+SOURCE_PATH	:= source
+OBJECT_PATH	:= object
+BINARY_PATH	:= binary
 
 # files
 #
 SOURCES	:= $(wildcard $(SOURCE_PATH)/*.$(SUFFIX))
 OBJECTS	:= $(addprefix $(OBJECT_PATH)/, $(addsuffix .o, $(notdir $(basename $(SOURCES)))))
 BINARY	:= $(BINARY_PATH)/$(TARGET)
-
-#ifeq '$(BUILD_MODE)' 'debug'
-#	BINARY := $(BINARY)-debug
-#endif
 
 CLEAN := $(OBJECTS) \
 		 $(BINARY)
@@ -36,7 +40,7 @@ $(BINARY): $(OBJECTS)
 	$(COMPILER) $(OBJECTS) -o $@ $(COMPILER_FLAGS)
 
 $(OBJECT_PATH)/%.o: $(SOURCE_PATH)/%.$(SUFFIX)
-	sccache $(COMPILER) $< $(COMPILER_FLAGS) -c -o $@
+	$(SCCACHE) $(COMPILER) $< $(COMPILER_FLAGS) -c -o $@
 
 .PHONY: paths
 paths:

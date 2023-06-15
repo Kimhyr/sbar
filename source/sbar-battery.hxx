@@ -1,5 +1,5 @@
-#ifndef SBAR_BATTERY_H
-#define SBAR_BATTERY_H
+#ifndef SBAR_BATTERY_HXX
+#define SBAR_BATTERY_HXX
 
 #include <fstream>
 

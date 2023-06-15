@@ -1,5 +1,5 @@
-#include "sbar-temp.h"
-#include "sbar-utils.h"
+#include "sbar-temp.hxx"
+#include "sbar-utils.hxx"
 
 namespace sbar
 {

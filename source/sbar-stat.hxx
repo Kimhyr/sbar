@@ -1,5 +1,5 @@
-#ifndef SBAR_STAT_H
-#define SBAR_STAT_H
+#ifndef SBAR_STAT_HXX
+#define SBAR_STAT_HXX
 
 #include <fstream>
 

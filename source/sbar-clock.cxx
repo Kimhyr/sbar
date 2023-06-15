@@ -1,5 +1,5 @@
-#include "sbar-clock.h"
-#include "sbar.h"
+#include "sbar-clock.hxx"
+#include "sbar.hxx"
 
 namespace sbar
 {

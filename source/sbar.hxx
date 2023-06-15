@@ -1,12 +1,12 @@
-#ifndef SBAR_H
-#define SBAR_H
+#ifndef SBAR_HXX
+#define SBAR_HXX
 
-#include "sbar-clock.h"
-#include "sbar-meminfo.h"
-#include "sbar-stat.h"
-#include "sbar-statvfs.h"
-#include "sbar-temp.h"
-#include "sbar-battery.h"
+#include "sbar-clock.hxx"
+#include "sbar-meminfo.hxx"
+#include "sbar-stat.hxx"
+#include "sbar-statvfs.hxx"
+#include "sbar-temp.hxx"
+#include "sbar-battery.hxx"
 
 namespace sbar
 {

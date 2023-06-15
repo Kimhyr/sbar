@@ -1,5 +1,5 @@
-#include "sbar-stat.h"
-#include "sbar-utils.h"
+#include "sbar-stat.hxx"
+#include "sbar-utils.hxx"
 
 #include <numeric>
 #include <iostream>

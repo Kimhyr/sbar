@@ -1,5 +1,5 @@
-#include "sbar-battery.h"
-#include "sbar-utils.h"
+#include "sbar-battery.hxx"
+#include "sbar-utils.hxx"
 
 #define PATH "/sys/class/power_supply/BAT0/"
 

@@ -1,4 +1,4 @@
-#include "sbar-utils.h"
+#include "sbar-utils.hxx"
 
 #include <iomanip>
 
