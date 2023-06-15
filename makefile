@@ -1,22 +1,17 @@
 # compiler cache support
 #
-ifeq ($(shell which sccache),)
-	CACHE ?= sccache
-else ifeq ($(shell which ccache),)
-	CACHE ?= ccache 
-endif
-
-TARGET		:= sbar
-BUILD_MODE	:= 
-SUFFIX		:= cxx
+TARGET	:= sbar
+SUFFIX	:= cxx
 
 # compilation command
 #
-COMPILER		:= clang++
+BUILD_MODE		:= release
+COMPILER_CACHE	:= sccache
+COMPILER		:= $(COMPILER_CACHE) clang++
 COMPILER_FLAGS	:= -Isource -fdiagnostics-color=always -std=c++20 -O3 -Wall -Wextra -pedantic
 
-ifeq '$(MODE)' 'debug'
-	COMPILER_FLAGS += -g
+ifeq '$(BUILD_MODE)' 'debug'
+	COMPILER_FLAGS += -D_DEBUG -g
 endif
 
 # paths
@@ -40,7 +35,7 @@ $(BINARY): $(OBJECTS)
 	$(COMPILER) $(OBJECTS) -o $@ $(COMPILER_FLAGS)
 
 $(OBJECT_PATH)/%.o: $(SOURCE_PATH)/%.$(SUFFIX)
-	$(SCCACHE) $(COMPILER) $< $(COMPILER_FLAGS) -c -o $@
+	$(COMPILER) $< $(COMPILER_FLAGS) -c -o $@
 
 .PHONY: paths
 paths:

@@ -1,5 +1,7 @@
 # sbar
 
+**WARNING:** this projet is meant to work on my system. If it doesn't work on yours, hack it.
+
 A hackable, very light-weight, blazingly fast, and print-based status bar.
 
 Can work with [swaybar](https://github.com/swaywm/sway/).
