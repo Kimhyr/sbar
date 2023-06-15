@@ -8,7 +8,10 @@ Can work with [swaybar](https://github.com/swaywm/sway/).
 
 ## Gallery
 
-![](etc/image.png)
+```sh
+$ ./binary/sbar
+temp: 47C | cpu: 1.2% | memory: 43.9% | disk: / 28.1% /home 6.7% | battery: C 5.0W 95% | date: 2023-06-15 06:15:20
+```
 
 ## Building
 
