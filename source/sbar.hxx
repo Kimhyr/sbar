@@ -7,6 +7,7 @@
 #include "sbar-statvfs.hxx"
 #include "sbar-temp.hxx"
 #include "sbar-battery.hxx"
+#include "sbar-light.hxx"
 
 namespace sbar
 {
@@ -27,6 +28,7 @@ namespace sbar
 		Statvfs statvfs_;
 		Temp temp_;
 		Battery battery_;
+		Light light_;
 	};
 	
 	auto operator<<(std::ostream& os, SBar& self) -> std::ostream&;

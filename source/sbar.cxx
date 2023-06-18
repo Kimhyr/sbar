@@ -8,6 +8,7 @@ namespace sbar
 	auto operator<<(std::ostream& os, SBar& self) -> std::ostream&
 	{
 		std::cout
+			<< self.light_ << SEP
 			<< self.temp_ << SEP
 			<< self.stat_ << SEP
 			<< self.mem_info_ << SEP
